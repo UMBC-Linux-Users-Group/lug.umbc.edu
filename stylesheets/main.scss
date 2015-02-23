@@ -1,3 +1,4 @@
+// -------- MUI --------
 @import "bower_components/mui/src/sass/mui/colors";
 
 $umbc-black:       #000000;
@@ -19,8 +20,24 @@ $accent-color:       $umbc-red;
 $accent-color-dark:  $umbc-red-dark;
 $accent-color-light: $umbc-red-light;
 
+$appbar-font-color: $accent-color-dark;
+
 @import "bower_components/mui/src/sass/mui";
+// END
+
+// -------- fontawesome --------
+
+$fa-font-path: "../bower_components/fontawesome/fonts";
+@import "../bower_components/font-awesome/scss/font-awesome";
+
+// END
 
 body {
   background-color: $umbc-black-light;
+}
+
+#appbar-sidenav-toggle {
+  background-color: $umbc-black-light;
+  color: $accent-color;
+  font-size: 18pt;
 }

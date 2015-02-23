@@ -6,6 +6,7 @@ all: $(STYLESHEET)
 
 get-deps:
 	bower install mui
+	bower install fontawesome
 
 $(STYLESHEET): stylesheets/main.scss
 	scss $^ > $(STYLESHEET)
