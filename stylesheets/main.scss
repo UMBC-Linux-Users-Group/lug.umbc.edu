@@ -1,10 +1,29 @@
 @import "bower_components/mui/src/sass/mui/colors";
 
-$umbc_black:    #000000;
-$umbc_gold:     #ffc20e;
-$umbc_red:      #ed1c24;
+$umbc-black:       #000000;
+$umbc-black-dark:  darken(  $umbc-black, 10%); // This is nonsensical
+$umbc-black-light: lighten( $umbc-black, 20%);
+$umbc-gold:        #ffc20e;
+$umbc-gold-dark:   darken(  $umbc-gold, 10%);
+$umbc-gold-light:  lighten( $umbc-gold, 10%);
+$umbc-red:         #ed1c24;
+$umbc-red-dark:    darken(  $umbc-red, 10%);
+$umbc-red-light:   lighten( $umbc-red, 10%);
 
-body {
-  background-color: $umbc_black;
+#header-panel {
+  text-align: center;
 }
 
+$primary-color:       $umbc-gold;
+$primary-color-dark:  $umbc-gold-dark;
+$primary-color-light: $umbc-gold-light;
+
+$accent-color:       $umbc-red;
+$accent-color-dark:  $umbc-red-dark;
+$accent-color-light: $umbc-red-light;
+
+@import "bower_components/mui/src/sass/mui";
+
+body {
+  background-color: $umbc-black-light;
+}
