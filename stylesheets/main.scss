@@ -36,8 +36,28 @@ body {
   background-color: $umbc-black-light;
 }
 
-#appbar-sidenav-toggle {
+.appbar-sidenav-toggle {
   background-color: $umbc-black-light;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
   color: $accent-color;
-  font-size: 18pt;
+  cursor: pointer;
+  position: relative;
+  left: -2px;
+  margin-right: 18px;
+}
+
+.appbar-brand {
+  font-size: 25px;
+  color: $umbc-black-light;
+  vertical-align: middle;
+}
+
+.appbar-brand:hover {
+  text-decoration: none;
+  color: $umbc-black-light;
 }
