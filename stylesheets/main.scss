@@ -64,7 +64,7 @@ header {
   margin-right: 18px;
 }
 
-.appbar-brand {
+.appbar-brand, .appbar-brand:visited {
   font-size: 25px;
   color: $umbc-black-light;
   vertical-align: middle;
@@ -77,8 +77,25 @@ header {
 
 #sidenav {
   display: block;
+  position: fixed;
+  top: 0px;
   left: 0px;
+  height: 100%;
+  background-color: #fff;
+  overflow: auto;
+  // width: 230px;
 }
+
+.sidenav-list {
+  padding: 10px;
+  list-style-type: none;
+}
+
+.sidenav-list-category {
+  font-weight: bold;
+}
+
+.sidenav-list-link { }
 
 #footer-divider {
   padding: 10px;
