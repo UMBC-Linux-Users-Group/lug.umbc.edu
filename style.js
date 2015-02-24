@@ -21,7 +21,6 @@ $(function() {
     $("#sidenav").click(function(e) {
       // Don't send the click event to the document if it landed on the navbar.
       e.stopPropagation();
-      return false;
     })
 
     // Bind the menu button to opening the navbar.
@@ -29,6 +28,5 @@ $(function() {
       // Don't send the click onward past the button.
       navbarOn();
       e.stopPropagation();
-      return false;
     });
 });
