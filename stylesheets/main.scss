@@ -76,7 +76,7 @@ header {
 }
 
 #sidenav {
-  display: block;
+  display: hidden;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -84,18 +84,27 @@ header {
   background-color: #fff;
   overflow: auto;
   // width: 230px;
-}
 
-.sidenav-list {
-  padding: 10px;
-  list-style-type: none;
-}
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.26);
+  transition: box-shadow 0.2s;
 
-.sidenav-list-category {
-  font-weight: bold;
-}
+  .mui-container-fluid {
+  }
 
-.sidenav-list-link { }
+  ul {
+    list-style-type: none;
+    padding: 10px;
+    li {
+      font-weight: bold;
+      ul {
+        li {
+          padding: 3px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
 
 #footer-divider {
   padding: 10px;
