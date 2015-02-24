@@ -22,6 +22,8 @@ $accent-color-light: $umbc-red-light;
 
 $appbar-font-color: $accent-color-dark;
 
+$divider-color: $accent-color;
+
 @import "bower_components/mui/src/sass/mui";
 // END
 
@@ -60,4 +62,13 @@ body {
 .appbar-brand:hover {
   text-decoration: none;
   color: $umbc-black-light;
+}
+
+#footer-divider {
+  padding: 10px;
+}
+
+#g-footer {
+  color: $accent-color;
+  height: 20px;
 }
