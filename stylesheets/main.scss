@@ -38,6 +38,17 @@ body {
   background-color: $umbc-black-light;
 }
 
+header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+
+.header-shadow {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  transition: box-shadow 0.2s;
+}
+
 #appbar-sidenav-toggle {
   background-color: $umbc-black-light;
   width: 40px;
