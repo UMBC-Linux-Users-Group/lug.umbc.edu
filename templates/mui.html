@@ -77,17 +77,16 @@
             Add a category to the sidenav.
             <li class="sidenav-list-category">Some Category</li>
           -->
-              <li ><a href="/">Home Page</a></li>
-              <li ><a href="installfest.html">InstallFest</a></li>
-              <li ><a href="mailinglist.html">Mailing List</a></li>
-              <li ><a href="events.html">Events</a></li>
+              {% for name, path in pages.items() %}
+                <li><a href="{{ path }}">{{ name }}</a></li>
+              {% endfor %}
             </ul>
           </li>
           <li>Our Links
             <ul>
-              <li><a href="http://my.umbc.edu/groups/lug">myUMBC</a></li>
-              <li><a href="https://lists.umbc.edu/lists/arc/umbclinux">Mailing List</a></li>
-              <li><a href="https://trello.com/umbclinuxusersgroup">Trello</a></li>
+              {% for name, url in links.items() %}
+                <li><a href="{{ url }}">{{ name }}</a></li>
+              {% endfor %}
             </ul>
           </li> 
           <!--
