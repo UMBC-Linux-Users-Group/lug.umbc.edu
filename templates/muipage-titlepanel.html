@@ -1,0 +1,15 @@
+{% extends "muipage.html" %}
+
+{% block innerbody %}
+  <div id="header-panel" class="mui-panel mui-text-center">
+    {% block titlecontent %}
+      <h1>UMBC Linux Users' Group</h1>
+      <h3>Promoting GNU/Linux in the UMBC Community</h4>
+    {% endblock %}
+  </div>
+
+  <div class="mui-divider"></div>
+
+  {{ super() }}
+
+{% endblock %}
