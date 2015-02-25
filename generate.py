@@ -8,7 +8,9 @@ except ImportError:
     print("To compile this website, you must install jinja")
     os.exit(1)
 
-cp = configparser.ConfigParser()
+cp = configparser.ConfigParser(
+    interpolation = configparser.ExtendedInterpolation()
+    )
 cp.optionxform = str # be case sensitive in keys
 cp.read('demo.conf')
 conf_main = cp['main']
