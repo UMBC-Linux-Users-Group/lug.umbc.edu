@@ -26,6 +26,9 @@ try:
     cp['autogen']['VersionSummary'] = subprocess.check_output(
             ["git", "describe", "--always", "--dirty=+"],
             universal_newlines=True)
+    cp['autogen']['LastChanged'] = subprocess.check_output(
+            ["git", "log", "-1", "--pretty=format:%ad", "--date=short"],
+            universal_newlines=True)
 except (subprocess.CalledProcessError, FileNotFoundError) as e:
     print("Could not get Git version: %s" % e)
     print("Continuing...")
@@ -54,6 +57,7 @@ for page in pages.values():
                 repository = conf.get('Repository'),
                 versionlink = conf.get('RepositoryVersion'),
                 versionsum = cp['autogen'].get('VersionSummary'),
+                lastchanged = cp['autogen'].get('LastChanged'),
                 ))
 
         print("OK")

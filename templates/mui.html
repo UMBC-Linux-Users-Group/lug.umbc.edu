@@ -58,6 +58,9 @@
                     <i class="fa fa-code-fork"></i>&nbsp;{{ versionsum }}
                   </a></li>
               {% endif %}
+              {% if lastchanged %}
+                <li>Changed {{ lastchanged }}</li>
+              {% endif %}
             </ul>
           </div>
         </div>
