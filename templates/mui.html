@@ -78,7 +78,7 @@
             <li class="sidenav-list-category">Some Category</li>
           -->
               {% for name, path in pages.items() %}
-                <li><a href="{{ path }}">{{ name }}</a></li>
+                <li><a href="{{ root + path }}">{{ name }}</a></li>
               {% endfor %}
             </ul>
           </li>
@@ -90,7 +90,7 @@
             </ul>
           </li> 
           <!--
-          <li>Other LUGs
+          <li>Friends
           </li>
           -->
         </ul>

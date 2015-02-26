@@ -17,5 +17,7 @@ conf_main = cp['main']
 
 env = jinja.Environment(loader=jinja.FileSystemLoader(conf_main.get('TemplatePath')))
 
-print(env.get_template('muipage-titlepanel.html').render(pages = cp['pages'],
+print(env.get_template('muipage-titlepanel.html').render(
+    root = conf_main.get('RootURL'),
+    pages = cp['pages'],
     links = cp['links']))
