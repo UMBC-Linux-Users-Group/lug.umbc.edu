@@ -50,10 +50,14 @@
         <div class="mui-container">
           <div id="g-footer" class="mui-text-center">
             <ul class="mui-list-unstyled mui-list-inline">
-              <li><a href="https://github.com/UMBC-Linux-Users-Group/lug.umbc.edu">
+              <li><a href="{{ repository }}">
                   <i class="fa fa-github"></i>&nbsp;This Site
                 </a></li>
-                <!-- TODO: Add a last-updated field and a link to the commit in question. -->
+              {% if versionsum %}
+                <li><a href="{{ versionlink }}">
+                    <i class="fa fa-code-fork"></i>&nbsp;{{ versionsum }}
+                  </a></li>
+              {% endif %}
             </ul>
           </div>
         </div>
