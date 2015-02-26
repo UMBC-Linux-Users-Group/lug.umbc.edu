@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, configparser
+import os, sys, configparser
 
 try:
     import jinja2 as jinja
@@ -12,12 +12,33 @@ cp = configparser.ConfigParser(
     interpolation = configparser.ExtendedInterpolation()
     )
 cp.optionxform = str # be case sensitive in keys
-cp.read('demo.conf')
-conf_main = cp['main']
+cp.read(sys.argv[1])
+conf = cp['main']
+pages = cp['pages']
 
-env = jinja.Environment(loader=jinja.FileSystemLoader(conf_main.get('TemplatePath')))
+env = jinja.Environment(loader=jinja.FileSystemLoader(conf.get('TemplatePath')))
 
-print(env.get_template('muipage-titlepanel.html').render(
-    root = conf_main.get('RootURL'),
-    pages = cp['pages'],
-    links = cp['links']))
+for page in pages.values():
+    # Handle the root page in a sensible way.
+    if page == "/" or page == "":
+        page = "index.html"
+
+    # Get the filename of the page.
+    pagepath = os.path.join(conf.get('PagePath'), page)
+    outputpath = os.path.join(conf.get('OutputPath'), page)
+
+    print("%s... " % page, end='')
+
+    try:
+        with open(pagepath, 'r') as fi:
+            paget = env.from_string(fi.read())
+        with open(outputpath, 'w') as fo:
+            fo.write( paget.render(
+                root = conf.get('RootURL'),
+                pages = pages,
+                links = cp['links']))
+
+        print("OK")
+    except IOError as e:
+        print("Failed!")
+        print("    %s" % e)
