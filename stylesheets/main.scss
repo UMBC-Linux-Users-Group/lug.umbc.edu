@@ -107,11 +107,11 @@ header {
     }
   }
 
-  -webkit-transition: all 0.3s ease-out;
-     -moz-transition: all 0.3s ease-out;
-      -ms-transition: all 0.3s ease-out;
-       -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+     -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+       -o-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
 }
 #sidenav:target {
   left: 0px;
@@ -123,6 +123,11 @@ header {
   width: 100%;
   opacity: 0;
   background-color: rgba(#000, 0.20);
+  -webkit-transition: opacity 0.2s ease-in-out;
+     -mos-transition: opacity 0.2s ease-in-out;
+      -ms-transition: opacity 0.2s ease-in-out;
+       -o-transition: opacity 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out;
 }
 #overlay.overlay-on {
   opacity: 1;
