@@ -34,6 +34,8 @@ $fa-font-path: "../bower_components/fontawesome/fonts";
 
 // END
 
+$sidenav-width: 200px;
+
 body {
   background-color: $umbc-black-light;
 }
@@ -76,14 +78,14 @@ header {
 }
 
 #sidenav {
-  display: hidden;
+  display: block;
   position: fixed;
   top: 0px;
-  left: 0px;
+  left: -$sidenav-width;
   height: 100%;
   background-color: #fff;
   overflow: auto;
-  // width: 230px;
+  width: $sidenav-width;
 
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.26);
   transition: box-shadow 0.2s;
@@ -104,7 +106,28 @@ header {
       }
     }
   }
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
 }
+#sidenav:target {
+  left: 0px;
+}
+
+#overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(#000, 0.20);
+}
+#overlay.overlay-on {
+  opacity: 1;
+}
+
 
 #footer-divider {
   padding: 10px;

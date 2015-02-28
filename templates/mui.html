@@ -13,6 +13,10 @@
 
 {% block body %}
 
+  {% block overlay %}
+  <div id="overlay"></div>
+  {% endblock %}
+
   {% block appbar %}
   <header class="header-shadow">
     <nav class="mui-appbar" role="navigation">
@@ -21,7 +25,7 @@
           <tbody>
             <tr class="mui-appbar-height">
               <td>
-                <a id="appbar-sidenav-toggle">
+                <a id="appbar-sidenav-toggle" href="#sidenav">
                   <i class="fa fa-bars"></i>
                 </a>
                 <a class="appbar-brand mui-appbar-height" href="/">
@@ -70,40 +74,38 @@
   {% endblock %}
 
   {% block sidenav %}
-  <div id="mui-overlay">
-    <nav id="sidenav">
-      <div class="mui-container-fluid">
-        <div class="mui-appbar-line-height">
-          <h2><a class="appbar-brand" href="/">UMBC LUG</a></h2>
-          <div class="mui-divider-bottom"></div>
-        </div>
-        <ul class="sidenav-list">
-          <li>This Site
-            <ul>
-          <!--
-            Add a category to the sidenav.
-            <li class="sidenav-list-category">Some Category</li>
-          -->
-              {% for name, path in pages.items() %}
-                <li><a href="{{ root + path }}">{{ name }}</a></li>
-              {% endfor %}
-            </ul>
-          </li>
-          <li>Our Links
-            <ul>
-              {% for name, url in links.items() %}
-                <li><a href="{{ url }}">{{ name }}</a></li>
-              {% endfor %}
-            </ul>
-          </li> 
-          <!--
-          <li>Friends
-          </li>
-          -->
-        </ul>
+  <nav id="sidenav">
+    <div class="mui-container-fluid">
+      <div class="mui-appbar-line-height">
+        <h2><a class="appbar-brand" href="/">UMBC LUG</a></h2>
+        <div class="mui-divider-bottom"></div>
       </div>
-    </nav>
-  </div>
+      <ul class="sidenav-list">
+        <li>This Site
+          <ul>
+        <!--
+          Add a category to the sidenav.
+          <li class="sidenav-list-category">Some Category</li>
+        -->
+            {% for name, path in pages.items() %}
+              <li><a href="{{ root + path }}">{{ name }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li>Our Links
+          <ul>
+            {% for name, url in links.items() %}
+              <li><a href="{{ url }}">{{ name }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        <!--
+        <li>Friends
+        </li>
+        -->
+      </ul>
+    </div>
+  </nav>
   {% endblock %}
 
 {% endblock %}

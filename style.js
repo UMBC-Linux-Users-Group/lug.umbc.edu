@@ -1,21 +1,20 @@
 // Enable the side navbar.
 function navbarOn() {
-    $("body").addClass("mui-overlay-on");
-    $("#mui-overlay").show();
+    window.location.hash = "sidenav";
+    $("#overlay").addClass("overlay-on");
 }
 
 // Disable the side navbar.
 function navbarOff() {
-    $("body").removeClass("mui-overlay-on");
-    $("#mui-overlay").hide();
+    window.location.hash = " ";
+    $("#overlay").removeClass("overlay-on");
 }
 
 $(function() {
     // Hide the side navbar by default.
-    $("#mui-overlay").hide();
 
     // Clicking anywhere in the document will close the navbar, except on the navbar itself.
-    $(document).click(function() {
+    $("#overlay").click(function() {
       navbarOff();
     })
     $("#sidenav").click(function(e) {
