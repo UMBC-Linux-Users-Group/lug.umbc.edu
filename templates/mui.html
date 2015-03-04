@@ -54,11 +54,13 @@
         <div class="mui-container">
           <div id="g-footer" class="mui-text-center">
             <ul class="mui-list-unstyled mui-list-inline">
-              <li><a href="{{ repository }}">
+              <li><a href="{{ repository }}" class="helplink"
+                  title="The source code for this site is on GitHub!">
                   <i class="fa fa-github"></i>&nbsp;This Site
                 </a></li>
               {% if versionsum %}
-                <li><a href="{{ versionlink }}">
+                <li><a href="{{ versionlink }}" class="helplink"
+                    title="This is the Git commit ID of this version of the site.">
                     <i class="fa fa-code-fork"></i>&nbsp;{{ versionsum }}
                   </a></li>
               {% endif %}

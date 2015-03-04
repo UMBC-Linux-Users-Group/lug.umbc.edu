@@ -124,11 +124,11 @@ header {
   width: 100%;
   opacity: 0;
   background-color: rgba(#000, 0.20);
-  -webkit-transition: all 0.2s ease-in-out;
-     -mos-transition: all 0.2s ease-in-out;
-      -ms-transition: all 0.2s ease-in-out;
-       -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+     -mos-transition: opacity 0.2s ease-in-out;
+      -ms-transition: opacity 0.2s ease-in-out;
+       -o-transition: opacity 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out;
 }
 #overlay.overlay-on {
   display: block;
@@ -159,4 +159,8 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.helplink {
+  cursor: help;
 }
