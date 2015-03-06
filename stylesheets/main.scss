@@ -36,6 +36,9 @@ $fa-font-path: "../bower_components/fontawesome/fonts";
 
 $sidenav-width: 200px;
 
+$media-mobile-width: 500px;
+$media-condensed-width: 1000px;
+
 body {
   background-color: $umbc-black-light;
 }
@@ -65,7 +68,7 @@ header {
   left: -2px;
   margin-right: 18px;
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: $media-mobile-width) {
     display: none;
   }
 }
@@ -96,13 +99,13 @@ header {
   vertical-align: middle;
 }
 
-#topnav {
+#topnav-expanded-ourlinks {
   display: table;
   margin: 10px;
   padding-left: 20px;
   width: 100%;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: $media-condensed-width) {
     display: none;
   }
 
@@ -116,6 +119,17 @@ header {
     display: block;
     text-align: center;
     margin: 0 5px;
+  }
+}
+
+#topnav-condensed-ourlinks {
+  margin: 10px;
+
+  @media screen and (max-width: $media-mobile-width), (min-width: $media-condensed-width) {
+    display: none;
+  }
+
+  li {
   }
 }
 

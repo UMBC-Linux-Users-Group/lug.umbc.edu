@@ -34,11 +34,21 @@
               </td>
               <td>
                 <ul id="topnav">
-                  {% for name, path in pages.items() %}
-                  <li>
-                    <a class="appbar-nav" href="{{ root + path }}">{{ name }}</a>
-                  </li>
-                  {% endfor %}
+                  <div id="topnav-expanded-ourlinks">
+                    {% for name, path in pages.items() %}
+                      <li><a class="appbar-nav" href="{{ root + path }}">{{ name }}</a></li>
+                    {% endfor %}
+                  </div>
+                  <div id="topnav-condensed-ourlinks" class="mui-dropdown">
+                    <button class="mui-btn mui-btn-default" data-toggle="dropdown">
+                      Our Links
+                    </button>
+                    <ul class="mui-dropdown-menu">
+                      {% for name, path in pages.items() %}
+                        <li><a class="appbar-nav" href="{{ root + path }}">{{ name }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
                 </ul>
             </tr>
           </tbody>
