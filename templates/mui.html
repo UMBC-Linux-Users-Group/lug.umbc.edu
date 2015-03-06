@@ -32,6 +32,14 @@
                   UMBC LUG
                 </a>
               </td>
+              <td>
+                <ul id="topnav">
+                  {% for name, path in pages.items() %}
+                  <li>
+                    <a class="appbar-nav" href="{{ root + path }}">{{ name }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
             </tr>
           </tbody>
         </table>

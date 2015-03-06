@@ -64,9 +64,14 @@ header {
   position: relative;
   left: -2px;
   margin-right: 18px;
+
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
 }
 
 .appbar-brand, .appbar-brand:visited {
+  margin: 10px;
   font-size: 25px;
   color: $umbc-black-light;
   vertical-align: middle;
@@ -75,6 +80,43 @@ header {
 .appbar-brand:hover {
   text-decoration: none;
   color: $umbc-black-light;
+}
+
+.appbar-inner {
+  display: table;
+
+  td {
+    display: table-cell;
+  }
+}
+
+.appbar-nav {
+  font-size: 20px;
+  color: $umbc-black-light;
+  vertical-align: middle;
+}
+
+#topnav {
+  display: table;
+  margin: 10px;
+  padding-left: 20px;
+  width: 100%;
+
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+
+  li {
+    display: table-cell;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    margin: 0 5px;
+  }
 }
 
 #sidenav {
