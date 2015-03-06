@@ -68,7 +68,8 @@ header {
   left: -2px;
   margin-right: 18px;
 
-  @media screen and (min-width: $media-mobile-width) {
+  @media screen and (min-width: $media-mobile-width) and
+    (min-device-width: $media-mobile-width) {
     display: none;
   }
 }
@@ -105,7 +106,9 @@ header {
   padding-left: 20px;
   width: 100%;
 
-  @media screen and (max-width: $media-condensed-width) {
+  @media only screen and (max-width: $media-condensed-width), only screen and
+    (max-device-width: $media-condensed-width) {
+
     display: none;
   }
 
