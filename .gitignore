@@ -1,6 +1,8 @@
 # Created by https://www.gitignore.io
 
 stylesheet.css
+lug.umbc.edu.tar
+output/
 
 ### Bower ###
 bower_components
