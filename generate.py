@@ -35,7 +35,7 @@ except (subprocess.CalledProcessError, FileNotFoundError) as e:
 
 env = jinja.Environment(loader=jinja.FileSystemLoader(conf.get('TemplatePath')))
 
-for page in pages.values():
+for pagename, page in pages.items():
     # Handle the root page in a sensible way.
     if page == "/" or page == "":
         page = "index.html"
@@ -45,6 +45,11 @@ for page in pages.values():
     outputpath = os.path.join(conf.get('OutputPath'), page)
 
     print("%s... " % page, end='')
+
+    if pagename in cp:
+        data = cp[pagename]
+    else:
+        data = {}
 
     try:
         with open(pagepath, 'r') as fi:
@@ -58,6 +63,7 @@ for page in pages.values():
                 versionlink = conf.get('RepositoryVersion'),
                 versionsum = cp['autogen'].get('VersionSummary'),
                 lastchanged = cp['autogen'].get('LastChanged'),
+                data = data,
                 ))
 
         print("OK")
