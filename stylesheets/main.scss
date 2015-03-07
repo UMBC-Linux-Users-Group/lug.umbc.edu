@@ -100,7 +100,21 @@ header {
   vertical-align: middle;
 }
 
-#topnav-expanded-ourlinks {
+#topnav {
+  display: table;
+  vertical-align: middle;
+
+  li {
+    display: table-cell;
+    margin: 0px;
+  }
+
+  .mui-btn {
+    margin: 0px;
+  }
+}
+
+#topnav-expanded-pages {
   display: table;
   margin: 10px;
   padding-left: 20px;
@@ -108,7 +122,6 @@ header {
 
   @media only screen and (max-width: $media-condensed-width), only screen and
     (max-device-width: $media-condensed-width) {
-
     display: none;
   }
 
@@ -122,13 +135,22 @@ header {
     display: block;
     text-align: center;
     margin: 0 5px;
+
   }
 }
 
-#topnav-condensed-ourlinks {
-  margin: 10px;
-
+#topnav-condensed-pages {
+  vertical-align: middle;
   @media screen and (max-width: $media-mobile-width), (min-width: $media-condensed-width) {
+    display: none;
+  }
+
+  li {
+  }
+}
+#topnav-condensed-links {
+  vertical-align: middle;
+  @media screen and (max-width: $media-mobile-width) {
     display: none;
   }
 
