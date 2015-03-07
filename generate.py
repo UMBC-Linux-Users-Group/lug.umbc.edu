@@ -61,6 +61,7 @@ for pagename, page in pages.items():
                 links = cp['links'],
                 repository = conf.get('Repository'),
                 versionlink = conf.get('RepositoryVersion'),
+                GA_ID = conf.get('GA_ID'),
                 versionsum = cp['autogen'].get('VersionSummary'),
                 lastchanged = cp['autogen'].get('LastChanged'),
                 data = data,
