@@ -1,0 +1,15 @@
+{% extends "muipage.html" %}
+
+{% block content %}
+
+  <h3>About the Linux Users' Group</h3>
+
+  <h3>Current Officers</h3>
+
+  <h4>President: <a href="mailto:{{ data.President_email }}">{{ data.President_name }}</a></h4>
+  <h4>Vice President: <a href="mailto:{{ data.VicePresident_email }}">{{ data.VicePresident_name }}</a></h4>
+  <h4>Treasurer: <a href="mailto:{{ data.Treasurer_email }}">{{ data.Treasurer_name }}</a></h4>
+  <h4>Secretary: <a href="mailto:{{ data.Secretary_email }}">{{ data.Secretary_name }}</a></h4>
+  <h4>Advisor: <a href="mailto:{{ data.Advisor_email }}">{{ data.Advisor_name }}</a></h4>
+
+{% endblock %}
