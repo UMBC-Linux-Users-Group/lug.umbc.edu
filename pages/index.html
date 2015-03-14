@@ -9,6 +9,7 @@
 Held on Wednesdays at 12:00 PM in ITE 234.
 </p>
 
+{% if data.getboolean('Installfest_running_soon') %}
 <h3>Next Installfest</h3>
 <p>
 {{ data.Installfest_date }}
@@ -17,6 +18,7 @@ Held on Wednesdays at 12:00 PM in ITE 234.
    href="{{ data.Installfest_eventlink }}"><img
    border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>
 </p>
+{% endif %}
 
 <h3>Join our Mailing List!</h3>
 <p>
