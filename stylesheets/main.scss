@@ -12,17 +12,17 @@ $umbc-red-dark:    darken(  $umbc-red, 10%);
 $umbc-red-light:   lighten( $umbc-red, 10%);
 
 
-$primary-color:       $umbc-gold;
-$primary-color-dark:  $umbc-gold-dark;
-$primary-color-light: $umbc-gold-light;
+$mui-primary-color:       $umbc-gold;
+$mui-primary-color-dark:  $umbc-gold-dark;
+$mui-primary-color-light: $umbc-gold-light;
 
-$accent-color:       $umbc-red;
-$accent-color-dark:  $umbc-red-dark;
-$accent-color-light: $umbc-red-light;
+$mui-accent-color:       $umbc-red;
+$mui-accent-color-dark:  $umbc-red-dark;
+$mui-accent-color-light: $umbc-red-light;
 
-$appbar-font-color: $accent-color-dark;
+$appbar-font-color: $mui-accent-color-dark;
 
-$divider-color: $accent-color;
+$divider-color: $mui-accent-color;
 
 @import "bower_components/mui/src/sass/mui";
 // END
@@ -62,7 +62,7 @@ header {
   border-radius: 50%;
   display: inline-block;
   text-align: center;
-  color: $accent-color;
+  color: $mui-accent-color;
   cursor: pointer;
   position: relative;
   left: -2px;
@@ -222,7 +222,7 @@ header {
 }
 
 #g-footer {
-  color: $accent-color;
+  color: $mui-accent-color;
   height: 20px;
 }
 
