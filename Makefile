@@ -1,8 +1,9 @@
 GENERATOR := ./generate.py
 GENCONF := ./conf.ini
 
-SCRIPT := output/style.js
-STYLESHEET := output/stylesheet.css
+OUTPUT := output
+SCRIPT := $(OUTPUT)/style.js
+STYLESHEET := $(OUTPUT)/stylesheet.css
 
 TARGETSERVER := gl.umbc.edu
 TARGETPATH := /afs/umbc.edu/public/www/lug/
@@ -16,14 +17,17 @@ get-deps:
 	bower install mui
 	bower install fontawesome
 
+$(OUTPUT):
+	mkdir -p $(OUTPUT)
+
 lug.umbc.edu.tar: all
-	tar -cf $@ -C output .
+	tar -cf $@ -C $(OUTPUT) .
 
 deploy: lug.umbc.edu.tar
 	scp lug.umbc.edu.tar $(TARGETSERVER):$(TARGETPATH)
 	ssh $(TARGETSERVER) "tar -C $(TARGETPATH) -xf $(TARGETPATH)/$^"
 
-generate: $(GENCONF) $(wildcard pages/*)
+generate: $(GENCONF) $(wildcard pages/*) $(OUTPUT)
 	$(GENERATOR) $(GENCONF)
 
 $(SCRIPT): style.js
