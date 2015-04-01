@@ -1,0 +1,76 @@
+{% extends "muipage.html" %}
+
+{% block content %}
+
+  <h3>When and Where</h3>
+
+  {% if data.getboolean('running_soon') %}
+  <p>
+    In the semester of Spring 2015, the Re-Installfest will be taking place on May 13th in Main Street of
+    the Commons. We'll start setting up at 5am, and will be ready to begin installing by 6am, and
+    the event will be over by 11pm.
+  </p>
+
+  <p> <a target="_blank"
+         href="{{ data.eventlink }}"><img
+    border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a> </p>
+
+  {% else %}
+  <p>
+    We are not planning another Installfest just yet this semester, but we announce each Installfest
+    several times on our <a href="mailinglist.html">mailing list</a> well before it happens. Feel
+    free to post on the list and ask, or to attend our weekly meetings.
+  </p>
+  {% endif %}
+
+  <h3>What is Re-Installfest?</h3>
+
+  <p>
+    Have you always wanted to try the latest and greatest Windows desktop operating system, but just
+    couldn't escape the oppressive clutches of your slow, outdated GNU/Linux operating system? Well,
+    now you finally can! The Linux Users' Group is working to provide installations of Windows 8.1 to
+    users looking to move away from Linux operating systems, and into the warm, welcoming arms of
+    Microsoft's most User-Friendly&tm; update to the Windows&tm; operating system yet! And, best of all,
+    thanks to generous donations from people like you, we will even be covering the already-minimal cost
+    of purchasing a license for this as well!
+  </p>
+
+  <p>
+    After this semester's InstallFest, we heard a lot of feedback from new Linux users, which eventually led
+    us to the conclusion that we should offer a Re-InstallFest! We'll be collection
+    <a href="http://www.gofundme.com/qmtvu4">donations</a> to purchase the licenses needed, with a goal of
+    at least 50 licenses. In the unlikely event that we are unable to purchase a sufficient number of licenses,
+    we will begin charging admission on a first-come-first-served basis.
+  </p>
+
+  <h3>How do I get Windows 8.1 Installed? / How does this Work?</h3>
+
+  <p>
+    It Just Works&tm;<sup>*</sup>
+  </p>
+
+  <p>
+    If you want Windows 8.1, and want us to perform the installation, then you should come to Installfest.
+  </p>
+
+  <p>
+    Before Re-Installfest, you don't need to worry about backing up your important data. Windows&tm; knows
+    best, and will preserve all of your files that it deems important enough in The Cloud&tm;.
+  </p>
+
+  <p>
+    At Installfest, you'll be asked to register.
+    You may also try out our demo laptops, provided that you of course have agreed to the Microsoft
+    Product Demonstration End User License Agreement beforehand, to help you get a better idea of
+    the desktop environment that you will eventually learn to tolerate. If you haven't yet agreed
+    for some reason, don't worry, there will be an opportunity to do so at the event!
+    Prior to starting installation
+    with one of our volunteers, you'll be asked to sign the Windows Software Re-Installation License
+    Agreement, acknowledging that you agree
+    to use exclusively Microsoft products in the future and that you will not install any communist
+    software without the written permission of Bill Gates, as well as naming Microsoft, Inc. as your
+    legal guardian in the event of any complications during the installation or any future use of the
+    Windows 8.1 Operating System. Pretty standard stuff, really.
+  </p>
+
+{% endblock %}
