@@ -14,7 +14,7 @@ TARGETPATH := /afs/umbc.edu/public/www/lug/
 all: generate $(SCRIPT) $(STYLESHEET) $(FONTS)
 tar: lug.umbc.edu.tar
 
-.PHONY: all tar get-deps generate deploy
+.PHONY: all tar get-deps generate deploy clean reallyclean
 
 get-deps:
 	bower install mui
@@ -41,3 +41,9 @@ $(SCRIPT): style.js
 
 $(STYLESHEET): stylesheets/main.scss
 	scss $^ > $(STYLESHEET)
+
+clean:
+	rm -rf $(OUTPUT) .sass-cache
+
+reallyclean: clean
+	rm -rf bower_components
