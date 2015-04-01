@@ -6,7 +6,9 @@ SCRIPT := $(OUTPUT)/style.js
 STYLESHEET := $(OUTPUT)/stylesheet.css
 FONTS := $(OUTPUT)/fonts
 
-TARGETSERVER := gl.umbc.edu
+GL_USER ?= $(USER)
+
+TARGETSERVER := $(GL_USER)@gl.umbc.edu
 TARGETPATH := /afs/umbc.edu/public/www/lug/
 
 all: generate $(SCRIPT) $(STYLESHEET) $(FONTS)
