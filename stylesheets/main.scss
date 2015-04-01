@@ -29,8 +29,8 @@ $divider-color: $accent-color;
 
 // -------- fontawesome --------
 
-$fa-font-path: "../bower_components/fontawesome/fonts";
-@import "../bower_components/font-awesome/scss/font-awesome";
+$fa-font-path: "./fonts";
+@import "../bower_components/fontawesome/scss/font-awesome";
 
 // END
 
