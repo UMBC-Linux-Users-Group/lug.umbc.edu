@@ -4,9 +4,20 @@
 
 <h3>Announcements and Events</h3>
 
-<h3>Weekly Meetings (Spring 2015)</h3>
+<h3>Weekly Meetings</h3>
 <p>
-Held on Wednesdays at 12:00 PM in ITE 234.
+{% if info.Semester|lower in ["summer", "winter"] %}
+  {% if info.Semester|lower == "summer" %}
+  {% set past_semester = "Spring" %}
+  {% set next_semester = "Fall" %}
+  {% endif %}
+
+  Meetings for the {{ past_semester }} have concluded, and will resume at the start of the
+  {{ next_semester }} semester.
+{% else %}
+  Weekly meetings are held for the duration of the {{ info.Semester }} semester every
+  {{ info.Meeting_day }} at {{ info.Meeting_time }} in {{ info.Meeting_room }}.
+{% endif %}
 </p>
 
 {% if data.getboolean('Installfest_running_soon') %}

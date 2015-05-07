@@ -59,6 +59,7 @@ for pagename, page in pages.items():
                 root = conf.get('RootURL'),
                 pages = pages,
                 links = cp['links'],
+                info = cp['info'],
                 repository = conf.get('Repository'),
                 versionlink = conf.get('RepositoryVersion'),
                 GA_ID = conf.get('GA_ID'),
