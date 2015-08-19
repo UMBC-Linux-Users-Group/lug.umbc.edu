@@ -1,5 +1,5 @@
 // -------- MUI --------
-@import "bower_components/mui/src/sass/mui/colors";
+@import "../bower_components/mui/src/sass/mui/colors";
 
 $umbc-black:       #000000;
 $umbc-black-dark:  darken(  $umbc-black, 10%); // This is nonsensical
@@ -24,7 +24,7 @@ $appbar-font-color: $mui-accent-color-dark;
 
 $divider-color: $mui-accent-color;
 
-@import "bower_components/mui/src/sass/mui";
+@import "../bower_components/mui/src/sass/mui";
 // END
 
 // -------- fontawesome --------
