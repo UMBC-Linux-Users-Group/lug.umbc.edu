@@ -6,9 +6,9 @@
 
   {% if data.getboolean('running_soon') %}
   <p>
-    In the semester of Spring 2015, Installfest will be taking place on March 13th in Main Street of
-    the Commons. We'll start setting up at 11, and will be ready to begin installing by noon, and
-    the event will be over by 6.
+    This semester, {{ info.Semester }} {{ info.Year }}, Installfest will be taking place on {{
+    data.date }} in Main Street of the Commons. We'll start setting up at 11, and will be ready to
+    begin installing by noon, and the event will be over by 6.
   </p>
 
   <p> <a target="_blank"
@@ -51,11 +51,22 @@
   <p>
     If you want Linux, and want us to perform the installation, then you should come to Installfest.
     {% if data.getboolean('running_soon') %}
-      If you can make it, please complete our
-      <a href="{{ data.signup }}">
-        pre-registration form</a> and fill out the information about your computer and software
-      requirements. We also <em>accept walk-ins</em>, but if you can, please complete our form. It
-      helps us assess what resources we need, and prepare better for the event.
+      {% if data.signup %}
+        If you can make it, please complete our
+        <a href="{{ data.signup }}">
+          pre-registration form
+        </a>
+        and fill out the information about your computer and software requirements. We also <em>accept
+          walk-ins</em>, but if you can, please complete our form. It helps us assess what resources
+        we need, and prepare better for the event.
+      {% else %}
+        There is no information to fill out in order to sign up, but please bear in mind that we ask
+        you to back up any important documents or programs, and
+        <a href="http://windows.microsoft.com/en-us/windows/improve-performance-defragmenting-hard-disk#1TC=windows-7">
+          defragment your hard drive
+        </a>
+        before you arrive, (if you want to retain your old files).
+      {% endif %}
     {% else %}
       As mentioned above, we are not planning to run an Installfest in the very near future, so you
       may want to come to our weekly meetings instead, or ask on the <a
