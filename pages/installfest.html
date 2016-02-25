@@ -1,11 +1,11 @@
-{% extends "muipage.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 
   <h3>When and Where</h3>
 
   {% if data.getboolean('running_soon') %}
-  <p>
+  <p class="flow-text">
     This semester, {{ info.Semester }} {{ info.Year }}, Installfest will be taking place on {{
     data.date }} in Main Street of the Commons. We'll start setting up at 11, and will be ready to
     begin installing by noon, and the event will be over by 6.
@@ -16,7 +16,7 @@
     border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a> </p>
 
   {% else %}
-  <p>
+  <p class="flow-text">
     We are not planning another Installfest just yet this semester, but we announce each Installfest
     several times on our <a href="mailinglist.html">mailing list</a> well before it happens. Feel
     free to post on the list and ask, or to attend our weekly meetings.
@@ -25,13 +25,13 @@
 
   <h3>What is Installfest?</h3>
 
-  <p>
+  <p class="flow-text">
     Linux Users' Groups are not only communities for existing users of Linux to find camaraderie and
     support, but are also advocate organizations. We want to enable and empower individuals to take
     control of their computers by using free and open software.
   </p>
 
-  <p>
+  <p class="flow-text">
     Each semester, we run Installfest, where seasoned Linux users volunteer their time to help
     newbies install Linux on their computers. We provide a wide selection of Linux flavors,
     appropriate for people of all skill levels. <em>All of the services and software involved are
@@ -40,7 +40,7 @@
 
   <h3>How do I get Linux Installed? / How does this Work?</h3>
 
-  <p>
+  <p class="flow-text">
     If you want Linux, and want us to perform the installation, then you should come to Installfest.
     {% if data.getboolean('running_soon') %}
       {% if data.signup %}
@@ -66,14 +66,14 @@
     {% endif %}
   </p>
 
-  <p>
+  <p class="flow-text">
     Before Installfest, you should <b>back up any important data</b> or programs on your computer,
     even if you are looking to dual-boot Linux and your current operating system. In the time before
     Installfest, you may want to start reading about available Linux distributions, and forming an
     opinion on what flavor might be best for you.
   </p>
 
-  <p>
+  <p class="flow-text">
     You may also try out our demo laptops, which will be outfitted with common Linux flavors, to
     help you get a better idea what you might want out of Linux. Prior to starting installation with
     one of our volunteers, you'll be asked to sign a release form, acknowledging that we can't
@@ -83,7 +83,7 @@
     what do if you encounter problems.
   </p>
 
-  <p>
+  <p class="flow-text">
     Be aware that all of the installers at the event are volunteers, and we can't provide any
     guarantee that your system will work the way you want. Sometimes, installs can take more time
     than we have available at Installfest. If that happens, you can come to our weekly meetings,

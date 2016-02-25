@@ -1,11 +1,11 @@
-{% extends "muipage-titlepanel.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 
 <h3>Announcements and Events</h3>
 
-<h3>Weekly Meetings</h3>
-<p>
+<h5>Weekly Meetings</h5>
+<p class="flow-text">
 {% if info.Semester|lower in ["summer", "winter"] %}
   {% if info.Semester|lower == "summer" %}
   {% set past_semester = "Spring" %}
@@ -21,8 +21,8 @@
 </p>
 
 {% if data.getboolean('Installfest_running_soon') %}
-<h3>Next Installfest</h3>
-<p>
+<h5>Next Installfest</h5>
+<p class="flow-text">
 {{ data.Installfest_date }}
 
 <a target="_blank"
@@ -31,8 +31,8 @@
 </p>
 {% endif %}
 
-<h3>Join our Mailing List!</h3>
-<p>
+<h5>Join our Mailing List!</h5>
+<p class="flow-text">
 We recommend joining our <a href="mailinglist.html">mailing list</a> for current
 information, event cancelations, and assistance.
 </p>

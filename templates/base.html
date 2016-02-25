@@ -25,15 +25,48 @@
     {% endblock %}
 
     {% block head %}
+    <!-- load Materialize -->
+    <link href="{{root}}/static/materialize.min.css" rel="stylesheet" type="text/css" />
     {% endblock %}
 
+    {% block title %}
+    <title>Linux Users' Group at UMBC</title>
+    {% endblock %}
   </head>
 
   <body>
-
-    {% block body %}
-    BASE TEMPLATE
+    {% block header %}
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <div class="container">
+          <a href="/" class="brand-logo">UMBC LUG</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {% for name, link in pages.items() %}
+            <li><a href="{{link}}">{{name}}</a></li>
+            {% endfor %}
+          </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     {% endblock %}
 
+    {% block main %}
+    <main>
+      <div class="container">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </main>
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+    {% block scripts %}
+    <script src="{{root}}/static/jquery.min.js"></script>
+    <script src="{{root}}/static/materialize.min.js"></script>
+    {% endblock %}
   </body>
 </html>
